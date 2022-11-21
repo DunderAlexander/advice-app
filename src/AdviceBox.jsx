@@ -1,16 +1,12 @@
-function AdviceBox() {
+function AdviceBox({ slip, onClick }) {
   return (
     <div className="wrapper">
-      <h4 className="title">ADVICE # 117</h4>
-      <p className="advice">
-        "Lorem ipsum dolor, sit amet consectetur adipisicing elit. Aspernatur,
-        explicabo."
-      </p>
+      <h4 className="title">ADVICE #{slip.slip.id}</h4>
+      <p className="advice">{slip.slip.advice}</p>
       <img src="./images/pattern-divider-desktop.svg" alt="" />
-      <div className="dice">
+      <div className="dice" onClick={onClick}>
         <img src="./images/icon-dice.svg" alt="" />
       </div>
-      {/* <img className="dice" src="./images/icon-dice.svg" alt="" /> */}
     </div>
   );
 }
