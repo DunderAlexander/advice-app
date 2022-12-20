@@ -17,7 +17,7 @@ Users should be able to:
 - HTML
 - CSS
 
-## Live Site URL: [Advice generator app](sample.com)
+## Live Site URL: [Advice generator app](https://dunder-advice-app.netlify.app/)
 
 ## Main page
 
