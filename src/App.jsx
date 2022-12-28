@@ -17,7 +17,9 @@ export default function App() {
 
   // fetch an advice
   async function fetchAdvice() {
-    const res = await fetch("https://api.adviceslip.com/advice");
+    const res = await fetch("https://api.adviceslip.com/advice", {
+      cache: "no-cache",
+    });
     const data = await res.json();
     return data;
   }
@@ -26,8 +28,10 @@ export default function App() {
     setSlip(newAdvice);
   }
   return (
-    <div className="container">
-      {!loading && <AdviceBox slip={slip} onClick={clickDice} />}
-    </div>
+    <main>
+      <div className="container">
+        {!loading && <AdviceBox slip={slip} onClick={clickDice} />}
+      </div>
+    </main>
   );
 }
